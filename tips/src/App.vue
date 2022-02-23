@@ -1,17 +1,16 @@
 <template>
-  <MainView></MainView>
+  <todo-service-wrapper>
+    <todos></todos>
+  </todo-service-wrapper>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
-import MainView from "@/examples/provideInject/MainView.vue";
+import TodoServiceWrapper from "@/examples/sfc/todoServiceWrapper.vue";
+import Todos from "@/examples/sfc/todos.vue";
 
 @Options({
-  components: {
-    MainView,
-    HelloWorld
-  },
+  components: {Todos, TodoServiceWrapper}
 })
 export default class App extends Vue {}
 </script>
